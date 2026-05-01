@@ -5,7 +5,7 @@
     --accent-color: #38bdf8;
     --card-bg: #161b22;
     --border-color: #30363d;
-    --hover-bg: rgba(56, 189, 248, 0.1);
+    --hover-bg: rgba(56, 189, 248, 0.05);
     --success-green: #10b981;
 }
 
@@ -79,26 +79,61 @@ h2 {
     padding-right: 50px;
 }
 
-/* --- Cards & Grid --- */
+/* --- Project Grid & Clean Card Links --- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
-.category, .project-card {
+/* This kills the purple/blue "trash" look */
+.project-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card {
     background: var(--card-bg);
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
-.category h3, .project-card h3 { 
-    color: var(--accent-color); 
-    margin-top: 0; 
+.project-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    text-decoration: none;
 }
 
-/* --- Professional Experience (Refactored) --- */
+.project-card p {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.view-more {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* Hover effects for the cards */
+.project-link:hover .project-card {
+    border-color: var(--accent-color);
+    background: var(--hover-bg);
+    transform: translateY(-5px);
+}
+
+/* --- Professional Experience --- */
 .experience-item {
     margin-bottom: 30px;
     padding: 25px;
@@ -111,7 +146,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Helps on mobile devices */
+    flex-wrap: wrap;
     margin-bottom: 5px;
 }
 
@@ -134,11 +169,8 @@ h2 {
     font-size: 0.95rem;
 }
 
-.context {
-    font-style: italic;
-    color: #cbd5e1;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.upcoming {
+    border-left: 5px solid var(--success-green);
 }
 
 .experience-item ul {
@@ -149,15 +181,6 @@ h2 {
 .experience-item li {
     margin-bottom: 10px;
     color: #cbd5e1;
-}
-
-.experience-item li strong {
-    color: #fff;
-}
-
-/* --- Upcoming Role Highlight --- */
-.upcoming {
-    border-left: 5px solid var(--success-green);
 }
 
 /* --- Footer --- */
