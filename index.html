@@ -4,7 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zachary Scheer | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Global Variables & Reset --- */
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #e6edf3;
+            --accent-color: #38bdf8;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --hover-bg: rgba(56, 189, 248, 0.05);
+            --success-green: #10b981;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, main, footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { color: #8b949e; font-size: 1.1rem; }
+
+        /* --- Navigation --- */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            border-color: var(--accent-color);
+            background: var(--hover-bg);
+            transform: translateY(-2px);
+        }
+
+        /* --- Section Styling --- */
+        section { margin-bottom: 4rem; }
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        /* --- Project Grid & image_3adb99.png FIX --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* 
+           STRICT OVERRIDE: This prevents the browser from 
+           turning the cards purple or adding underlines.
+        */
+        a.project-link, 
+        a.project-link:visited, 
+        a.project-link:active, 
+        a.project-link:hover {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block;
+            outline: none;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            color: var(--text-color) !important;
+        }
+
+        /* Deep clean for all text inside the cards */
+        .project-card h3, 
+        .project-card p, 
+        .project-card span {
+            text-decoration: none !important;
+        }
+
+        .project-card h3 {
+            color: var(--accent-color) !important;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: #8b949e !important;
+            font-size: 0.95rem;
+            margin: 15px 0;
+        }
+
+        .view-more {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: auto;
+        }
+
+        .project-link:hover .project-card {
+            border-color: var(--accent-color);
+            background: var(--hover-bg);
+            transform: translateY(-5px);
+        }
+
+        /* --- Experience --- */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .exp-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .role { color: var(--accent-color); font-size: 1.3rem; font-weight: 700; margin: 0; }
+        .company { font-weight: 600; color: #ffffff; }
+        .date, .location { color: #8b949e; font-size: 0.95rem; }
+        .upcoming { border-left: 5px solid var(--success-green); }
+        .experience-item li { margin-bottom: 10px; color: #cbd5e1; }
+
+        footer { text-align: center; color: #8b949e; border-top: 1px solid var(--border-color); margin-top: 4rem; }
+    </style>
 </head>
 <body>
 
@@ -29,7 +195,7 @@
         <section id="tech-stack">
             <h2>Technical Stack</h2>
             <div class="grid">
-                <div class="category">
+                <div class="experience-item" style="margin-bottom: 0;">
                     <h3>Backend & Data</h3>
                     <ul>
                         <li>Java (Spring Boot, JPA, Spring Security)</li>
@@ -38,7 +204,7 @@
                         <li>Pandas, NumPy, Matplotlib</li>
                     </ul>
                 </div>
-                <div class="category">
+                <div class="experience-item" style="margin-bottom: 0;">
                     <h3>DevOps & Cloud</h3>
                     <ul>
                         <li>AWS (EC2, Certified Cloud Practitioner)</li>
@@ -53,7 +219,6 @@
         <section id="experience">
             <h2>Professional Experience</h2>
             
-            <!-- Upcoming Internship -->
             <div class="experience-item upcoming">
                 <div class="exp-row">
                     <h3 class="role">Solutions Architect Intern</h3>
@@ -63,10 +228,9 @@
                     <span class="company">Cox Enterprises</span>
                     <span class="location">Atlanta, GA (Remote/Hybrid)</span>
                 </div>
-                <p class="context">Incoming Summer 2026 Internship focusing on enterprise-level system architecture and scalable infrastructure design.</p>
+                <p>Focusing on enterprise-level system architecture and scalable infrastructure design.</p>
             </div>
 
-            <!-- Internship 1 -->
             <div class="experience-item">
                 <div class="exp-row">
                     <h3 class="role">Backend / DevOps Engineer Intern</h3>
@@ -77,26 +241,8 @@
                     <span class="location">Chandler, AZ</span>
                 </div>
                 <ul>
-                    <li><strong>Developed and deployed RESTful APIs</strong> using Spring Boot within a microservices architecture.</li>
-                    <li><strong>Provisioned AWS EC2</strong> production services and implemented CI/CD pipelines, reducing deployment errors by 30%.</li>
-                    <li><strong>Containerized backend services</strong> using Docker, improving environment consistency and decreasing developer setup time by 20%.</li>
-                </ul>
-            </div>
-
-            <!-- TA Role -->
-            <div class="experience-item">
-                <div class="exp-row">
-                    <h3 class="role">CET Student Assistant (DSA TA)</h3>
-                    <span class="date">Jan 2026 – Present</span>
-                </div>
-                <div class="exp-row">
-                    <span class="company">Grand Canyon University</span>
-                    <span class="location">Phoenix, AZ</span>
-                </div>
-                <ul>
-                    <li><strong>Mentor 20+ students</strong> in algorithm complexity analysis and advanced Java data structure implementation.</li>
-                    <li><strong>Conduct weekly office hours</strong> providing debugging, optimization, and problem-solving guidance.</li>
-                    <li><strong>Collaborate with faculty</strong> to refine assignments, review test cases, and automate grading scripts.</li>
+                    <li>Developed and deployed RESTful APIs using Spring Boot within a microservices architecture.</li>
+                    <li>Provisioned AWS EC2 production services and implemented CI/CD pipelines, reducing deployment errors by 30%.</li>
                 </ul>
             </div>
         </section>
@@ -104,7 +250,6 @@
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="grid">
-                <!-- Ad Optimizer -->
                 <a href="https://github.com/ZacharyScheer16/AdOptimizer" target="_blank" class="project-link">
                     <div class="project-card">
                         <h3>Ad Optimizer (ML Platform)</h3>
@@ -113,7 +258,6 @@
                     </div>
                 </a>
 
-                <!-- Zillow Predictor -->
                 <a href="https://github.com/ZacharyScheer16/ZillowHousingMarket" target="_blank" class="project-link">
                     <div class="project-card">
                         <h3>Zillow Housing Predictor</h3>
@@ -122,7 +266,6 @@
                     </div>
                 </a>
 
-                <!-- Logistics System -->
                 <a href="https://github.com/ZacharyScheer16/Internal-Systems-FullStack" target="_blank" class="project-link">
                     <div class="project-card">
                         <h3>Logistics Management System</h3>
@@ -131,7 +274,6 @@
                     </div>
                 </a>
 
-                <!-- Volleyball Tracker -->
                 <a href="https://github.com/ZacharyScheer16/VolleyballStatTracker" target="_blank" class="project-link">
                     <div class="project-card">
                         <h3>Volleyball Stat Tracker</h3>

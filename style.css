@@ -79,19 +79,24 @@ h2 {
     padding-right: 50px;
 }
 
-/* --- Project Grid & Clean Card Links --- */
+/* --- Project Grid & Modern Card Styling --- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
-/* This kills the purple/blue "trash" look */
-.project-link {
+/* 
+   FORCE-KILL DEFAULT LINK STYLES (image_3adb99.png FIX)
+   Targeting all pseudo-states to prevent purple/blue text and underlines.
+*/
+a.project-link, 
+a.project-link:visited, 
+a.project-link:hover, 
+a.project-link:active {
     text-decoration: none !important;
     color: inherit !important;
     display: block;
-    transition: transform 0.3s ease;
 }
 
 .project-card {
@@ -104,16 +109,24 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.3s ease;
+    color: var(--text-color) !important;
+}
+
+/* Ensure child elements don't inherit link underlines */
+.project-card h3, 
+.project-card p, 
+.project-card span {
+    text-decoration: none !important;
 }
 
 .project-card h3 {
-    color: var(--accent-color);
+    color: var(--accent-color) !important;
     margin-top: 0;
-    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .project-card p {
-    color: #8b949e;
+    color: #8b949e !important;
     font-size: 0.95rem;
     margin: 15px 0;
     line-height: 1.5;
@@ -126,7 +139,7 @@ h2 {
     margin-top: auto;
 }
 
-/* Hover effects for the cards */
+/* Card Hover Logic */
 .project-link:hover .project-card {
     border-color: var(--accent-color);
     background: var(--hover-bg);
