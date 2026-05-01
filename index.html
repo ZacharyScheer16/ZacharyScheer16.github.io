@@ -12,16 +12,18 @@
         <h1>Zachary Scheer</h1>
         <p>Software Engineering Student | Backend & Data Science</p>
         <nav>
-            <a href="https://github.com/ZacharyScheer16" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/zachary-scheer-9786bb339/" target="_blank">LinkedIn</a> | 
-            <a href="resume.pdf" target="_blank">Resume</a>
+            <ul>
+                <li><a href="https://github.com/ZacharyScheer16" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/zachary-scheer-524a87268/" target="_blank">LinkedIn</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Software Engineering Student at GCU (Honors) with a 3.92 GPA. Specializing in backend systems, microservices, and AI/ML applications. AWS Certified Cloud Practitioner.</p>
+            <p>Software Engineering Student at Grand Canyon University (Honors) with a 3.92 GPA. Specializing in backend systems, microservices, and data-driven solutions. AWS Certified Cloud Practitioner.</p>
         </section>
 
         <section id="tech-stack">
@@ -30,7 +32,7 @@
                 <div class="category">
                     <h3>Backend & Data</h3>
                     <ul>
-                        <li>Java (Spring Boot/Security)</li>
+                        <li>Java (Spring Boot, JPA, Spring Security)</li>
                         <li>Python (FastAPI, Scikit-learn)</li>
                         <li>SQL (MySQL) & REST APIs</li>
                         <li>Pandas, NumPy, Matplotlib</li>
@@ -39,7 +41,7 @@
                 <div class="category">
                     <h3>DevOps & Cloud</h3>
                     <ul>
-                        <li>AWS (EC2, Cloud Practitioner)</li>
+                        <li>AWS (EC2, Certified Cloud Practitioner)</li>
                         <li>Docker & CI/CD Pipelines</li>
                         <li>Linux Automation (Bash)</li>
                         <li>Git/GitHub</li>
@@ -49,68 +51,94 @@
         </section>
 
         <section id="experience">
-    <h2>Professional Experience</h2>
-    
-    <div class="experience-item upcoming">
-        <div class="exp-row">
-            <h3 class="role">Solutions Architect Intern</h3>
-            <span class="date">May 2026 – Aug 2026</span>
-        </div>
-        <div class="exp-row">
-            <span class="company">Cox Enterprises</span>
-            <span class="location">Atlanta, GA</span>
-        </div>
-        <p class="context">Incoming Summer 2026 Internship focusing on enterprise-level system architecture and scalable infrastructure design.</p>
-    </div>
+            <h2>Professional Experience</h2>
+            
+            <!-- Upcoming Internship -->
+            <div class="experience-item upcoming">
+                <div class="exp-row">
+                    <h3 class="role">Solutions Architect Intern</h3>
+                    <span class="date">May 2026 – Aug 2026</span>
+                </div>
+                <div class="exp-row">
+                    <span class="company">Cox Enterprises</span>
+                    <span class="location">Atlanta, GA (Remote/Hybrid)</span>
+                </div>
+                <p class="context">Incoming Summer 2026 Internship focusing on enterprise-level system architecture and scalable infrastructure design.</p>
+            </div>
 
-    <div class="experience-item">
-        <div class="exp-row">
-            <h3 class="role">Backend / DevOps Engineer Intern</h3>
-            <span class="date">Apr 2025 – Aug 2025</span>
-        </div>
-        <div class="exp-row">
-            <span class="company">DevXSolutions</span>
-            <span class="location">Chandler, AZ</span>
-        </div>
-        <ul>
-            <li><strong>Developed RESTful APIs</strong> using Spring Boot within a microservices architecture.</li>
-            <li><strong>Provisioned AWS EC2</strong> services and implemented CI/CD pipelines, reducing deployment errors by 30%.</li>
-            <li><strong>Containerized services</strong> with Docker, improving environment consistency by 20%.</li>
-        </ul>
-    </div>
+            <!-- Internship 1 -->
+            <div class="experience-item">
+                <div class="exp-row">
+                    <h3 class="role">Backend / DevOps Engineer Intern</h3>
+                    <span class="date">Apr 2025 – Aug 2025</span>
+                </div>
+                <div class="exp-row">
+                    <span class="company">DevXSolutions</span>
+                    <span class="location">Chandler, AZ</span>
+                </div>
+                <ul>
+                    <li><strong>Developed and deployed RESTful APIs</strong> using Spring Boot within a microservices architecture.</li>
+                    <li><strong>Provisioned AWS EC2</strong> production services and implemented CI/CD pipelines, reducing deployment errors by 30%.</li>
+                    <li><strong>Containerized backend services</strong> using Docker, improving environment consistency and decreasing developer setup time by 20%.</li>
+                </ul>
+            </div>
 
-    <div class="experience-item">
-        <div class="exp-row">
-            <h3 class="role">CET Student Assistant (DSA TA)</h3>
-            <span class="date">Jan 2026 – Present</span>
-        </div>
-        <div class="exp-row">
-            <span class="company">Grand Canyon University</span>
-            <span class="location">Phoenix, AZ</span>
-        </div>
-        <ul>
-            <li><strong>Mentor 20+ students</strong> in algorithm complexity analysis and advanced Java data structures.</li>
-            <li><strong>Conduct office hours</strong> for debugging, optimization, and problem-solving guidance.</li>
-            <li><strong>Collaborate with faculty</strong> to automate grading scripts and refine project test cases.</li>
-        </ul>
-    </div>
-</section>
+            <!-- TA Role -->
+            <div class="experience-item">
+                <div class="exp-row">
+                    <h3 class="role">CET Student Assistant (DSA TA)</h3>
+                    <span class="date">Jan 2026 – Present</span>
+                </div>
+                <div class="exp-row">
+                    <span class="company">Grand Canyon University</span>
+                    <span class="location">Phoenix, AZ</span>
+                </div>
+                <ul>
+                    <li><strong>Mentor 20+ students</strong> in algorithm complexity analysis and advanced Java data structure implementation.</li>
+                    <li><strong>Conduct weekly office hours</strong> providing debugging, optimization, and problem-solving guidance.</li>
+                    <li><strong>Collaborate with faculty</strong> to refine assignments, review test cases, and automate grading scripts.</li>
+                </ul>
+            </div>
+        </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="grid">
-                <div class="project-card">
-                    <h3>Ad Optimizer (ML Platform)</h3>
-                    <p>Python/FastAPI system using Scikit-learn clustering to detect loss-generating ads with 75% accuracy.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Volleyball Stat Tracker</h3>
-                    <p>Real-time Java/Spring Boot app that eliminated manual spreadsheet entry, improving efficiency by 30%.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Logistics Management System</h3>
-                    <p>Secure JWT-based platform with automated PDF generation and SendGrid API integration.</p>
-                </div>
+                <!-- Ad Optimizer -->
+                <a href="https://github.com/ZacharyScheer16/AdOptimizer" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Ad Optimizer (ML Platform)</h3>
+                        <p>Python/FastAPI system using Scikit-learn clustering to detect loss-generating ads with 75% accuracy.</p>
+                        <span class="view-more">View Code on GitHub →</span>
+                    </div>
+                </a>
+
+                <!-- Zillow Predictor -->
+                <a href="https://github.com/ZacharyScheer16/ZillowHousingMarket" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Zillow Housing Predictor</h3>
+                        <p>Data science project using Pandas and Matplotlib to analyze Zillow market trends and calculate trend lines.</p>
+                        <span class="view-more">View Code on GitHub →</span>
+                    </div>
+                </a>
+
+                <!-- Logistics System -->
+                <a href="https://github.com/ZacharyScheer16/Internal-Systems-FullStack" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Logistics Management System</h3>
+                        <p>Full-stack Java platform managing fleet operations with automated PDF generation and Spring Security.</p>
+                        <span class="view-more">View Code on GitHub →</span>
+                    </div>
+                </a>
+
+                <!-- Volleyball Tracker -->
+                <a href="https://github.com/ZacharyScheer16/VolleyballStatTracker" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Volleyball Stat Tracker</h3>
+                        <p>Real-time Java/Spring Boot app that eliminated manual spreadsheet entry, improving efficiency by 30%.</p>
+                        <span class="view-more">View Code on GitHub →</span>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
